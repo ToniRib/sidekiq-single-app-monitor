@@ -4,7 +4,7 @@ require 'dotenv'
 Dotenv.load
 
 Sidekiq.configure_client do |config|
-  config.redis = { size: 1, url: ENV['REDIS_URL'], namespace: 'workers' }
+  config.redis = { size: 1, url: ENV['REDIS_URL'] }
 end
 
 map '/' do
